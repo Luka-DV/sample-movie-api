@@ -21,6 +21,8 @@ const client = new MongoClient(connectionUri,  {
 
 app.use(cors());
 
+app.use(express.static("public"));
+
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "index.html"));
 })
