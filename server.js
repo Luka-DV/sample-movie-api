@@ -40,13 +40,13 @@ async function runClient() {
                 .map(word => word[0].toUpperCase() + word.slice(1))
                 .join(" "); //make it capitalized
 
-            console.log("MOVIE NAME: ", movieName);
+            //console.log("MOVIE NAME: ", movieName);
 
             const query = { title: movieName };
         
             const queryResults = await movieCollection.find(query).toArray(); //you need to use a method like toArray() here to access the documents;
 
-            console.log("GET results: ", queryResults);
+            //console.log("GET results: ", queryResults);
             res.json(queryResults)
             
         })
@@ -57,7 +57,6 @@ async function runClient() {
 }
 
 runClient();
-
 
 
 
